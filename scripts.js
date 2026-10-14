@@ -7,7 +7,7 @@ document.addEventListener(`click`, (event) => {
 document.addEventListener(`click`, (event) => {
     const element = event.target;
     if (element.tagName === `IMG`) {
-        element.src =`assets/magic-
+        element.src =`assets/magic-1.gif`;
     } else if (element.tagName === `P`) {
         element.style.color = `white`;
         element.style.backgroundColor = `purple`
@@ -15,3 +15,26 @@ document.addEventListener(`click`, (event) => {
         element.style.backgroundColor = `lightgreen`;
     }
 });
+//PASO 3.
+document.addEventListener(`mouseover`, (event) => {
+    const element = event.target;
+    if (element.tagName === `IMG`) {
+        element.src =`assets/abracadabra.gif`;
+    }
+    else if (element.tagName === `P`) {
+        element.dataset.color = element.style.color;
+        element.dataset.fondo = element.style.backgroundColor;
+        element.style.color = `purple`;
+        element.style.backgroundColor = `orange`
+    }
+    else if (element.tagName === `ARTICLE` || element.tagName === `SECTION`) {
+        element.style.backgroundColor = `lightblue`;
+    }
+    
+    })
+    document.addEventListener(`mouseout`, (event) => {
+        const element = event.target;
+        if (element.tagName === `IMG`) {
+            element.src =element.dataset.original;
+}
+    })
