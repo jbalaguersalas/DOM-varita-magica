@@ -29,6 +29,7 @@ document.addEventListener(`mouseover`, (event) => {
         element.style.backgroundColor = `orange`
     }
     else if (element.tagName === `ARTICLE` || element.tagName === `SECTION`) {
+        element.dataset.fondo = element.style.backgroundColor;
         element.style.backgroundColor = `lightblue`;
     }
     
@@ -38,4 +39,12 @@ document.addEventListener(`mouseover`, (event) => {
         if (element.tagName === `IMG`) {
             element.src =element.dataset.original;
 }
+if (element.tagName === `P`) {
+    element.style.color = element.dataset.color;
+    element.style.backgroundColor = element.dataset.fondo;
+}
+if (element.tagName === `ARTICLE` || element.tagName === `SECTION`) {
+    element.style.backgroundColor = element.dataset.fondo;
+}
     })
+    //4.random
