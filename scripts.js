@@ -19,6 +19,7 @@ document.addEventListener(`click`, (event) => {
 document.addEventListener(`mouseover`, (event) => {
     const element = event.target;
     if (element.tagName === `IMG`) {
+        element.dataset.original = element.src;
         element.src =`assets/abracadabra.gif`;
     }
     else if (element.tagName === `P`) {
