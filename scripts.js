@@ -9,10 +9,10 @@ document.addEventListener(`click`, (event) => {
     if (element.tagName === `IMG`) {
         element.src =`assets/magic-1.gif`;
     } else if (element.tagName === `P`) {
-        element.style.color = `white`;
+        element.style.color = getRandom(colors);
         element.style.backgroundColor = `purple`
     }else if (element.tagName === `ARTICLE` || element.tagName === `SECTION`) {
-        element.style.backgroundColor = `lightgreen`;
+        element.style.backgroundColor = getRandom(colors);
     }
 });
 //PASO 3.
@@ -25,8 +25,8 @@ document.addEventListener(`mouseover`, (event) => {
     else if (element.tagName === `P`) {
         element.dataset.color = element.style.color;
         element.dataset.fondo = element.style.backgroundColor;
-        element.style.color = `purple`;
-        element.style.backgroundColor = `orange`
+        element.style.color = getRandom(colors);
+        element.style.backgroundColor = getRandom(colors);
     }
     else if (element.tagName === `ARTICLE` || element.tagName === `SECTION`) {
         element.dataset.fondo = element.style.backgroundColor;
@@ -54,5 +54,3 @@ const getRandom = (array) => {
     const numero= Math.floor(Math.random() * array.length);
     return array[numero];
 };
-
-console.log(getRandom(colors));
