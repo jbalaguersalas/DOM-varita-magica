@@ -7,10 +7,10 @@ document.addEventListener(`click`, (event) => {
 document.addEventListener(`click`, (event) => {
     const element = event.target;
     if (element.tagName === `IMG`) {
-        element.src =`assets/magic-1.gif`;
+        element.src = getRandom(gifs);
     } else if (element.tagName === `P`) {
         element.style.color = getRandom(colors);
-        element.style.backgroundColor = `purple`
+        element.style.backgroundColor = getRandom(colors);
     }else if (element.tagName === `ARTICLE` || element.tagName === `SECTION`) {
         element.style.backgroundColor = getRandom(colors);
     }
@@ -48,9 +48,10 @@ if (element.tagName === `ARTICLE` || element.tagName === `SECTION`) {
 }
     })
     //4.random
-const colors = ['red', 'blue', 'green']
-
+const colors = ['09814A', 'BCB382', '119DA4']
+const gifs = ['assets/magic-1.gif', 'assets/magic-2.gif', 'assets/magic-3.gif', 'assets/magic-4.gif', 'assets/magic-5.gif', 'assets/magic-6.gif'];
 const getRandom = (array) => {
     const numero= Math.floor(Math.random() * array.length);
     return array[numero];
 };
+
