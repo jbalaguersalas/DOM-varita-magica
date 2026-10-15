@@ -48,3 +48,11 @@ if (element.tagName === `ARTICLE` || element.tagName === `SECTION`) {
 }
     })
     //4.random
+const colors = ['red', 'blue', 'green']
+
+const getRandom = (array) => {
+    const numero= Math.floor(Math.random() * array.length);
+    return array[numero];
+};
+
+console.log(getRandom(colors));
