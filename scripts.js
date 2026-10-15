@@ -48,7 +48,7 @@ if (element.tagName === `ARTICLE` || element.tagName === `SECTION`) {
 }
     })
     //4.random
-const colors = ['09814A', 'BCB382', '119DA4']
+const colors = ['#09814A', '#BCB382', '#119DA4']
 const gifs = ['assets/magic-1.gif', 'assets/magic-2.gif', 'assets/magic-3.gif', 'assets/magic-4.gif', 'assets/magic-5.gif', 'assets/magic-6.gif'];
 const getRandom = (array) => {
     const numero= Math.floor(Math.random() * array.length);
