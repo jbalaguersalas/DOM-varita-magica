@@ -22,14 +22,6 @@ Los `addEventListener` van en `document`, en vez de poner uno en cada imagen o p
 
 Abre `index.html` en el navegador y pasea el ratón por la página. Haz click en imágenes y párrafos para ver los cambios.
 
-## Qué aprendí
-
-**Que un evento en `document` sirve para toda la página.** Con `event.target` sé qué elemento ha recibido el click, y con `tagName` decido qué hacer con él.
-
-**A guardar el estado antes de cambiarlo.** Si no guardo el `src` o el color original en el `dataset`, al quitar el ratón no tengo forma de volver atrás.
-
-**A escribir una función pequeña y reutilizarla.** `getRandom` funciona igual con el array de colores que con el de gifs.
-
 ## Enunciado original
 
 ![logotipo de The Bridge](https://user-images.githubusercontent.com/27650532/77754601-e8365180-702b-11ea-8bed-5bc14a43f869.png "logotipo de The Bridge")
