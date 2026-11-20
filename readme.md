@@ -1,3 +1,37 @@
+# Varita mágica
+
+Práctica del bootcamp de Full Stack de The Bridge, del bloque de fundamentos de programación.
+
+## Qué es
+
+Una entrada del blog Coding Horror descargada en local. Los profesores nos dieron la página y yo tenía que convertir el ratón en una varita: al pasar por encima o hacer click, las imágenes, los párrafos y los bloques cambian. Todo con JavaScript, en `scripts.js`. El enunciado completo está más abajo.
+
+## Qué hice
+
+- **Click**: con `event.preventDefault()` los enlaces dejan de llevar a otra página. Después miro el `tagName` del elemento:
+  - Si es una imagen (`IMG`), la cambio por uno de los seis gifs `magic-*` de la carpeta `assets`.
+  - Si es un párrafo (`P`), le cambio el color del texto y el del fondo.
+  - Si es un `ARTICLE` o una `SECTION`, le cambio el color de fondo.
+- **Pasar el ratón por encima** (`mouseover`): las imágenes se convierten en `abracadabra.gif`, los párrafos cambian de colores y los bloques se ponen azul claro.
+- **Quitar el ratón** (`mouseout`): cada elemento vuelve a como estaba. Para eso guardo el valor original en `dataset` antes de cambiarlo (`dataset.original`, `dataset.color`, `dataset.fondo`).
+- **`getRandom`** (premium): una función que recibe un array y devuelve un elemento al azar con `Math.floor(Math.random() * array.length)`. La uso para elegir colores de una paleta de tres (`#00ff8c`, `#ffd900`, `#1500ff`) y para elegir el gif.
+
+Los `addEventListener` van en `document`, en vez de poner uno en cada imagen o párrafo. Luego miro `event.target` para saber dónde ha pasado.
+
+## Cómo verlo
+
+Abre `index.html` en el navegador y pasea el ratón por la página. Haz click en imágenes y párrafos para ver los cambios.
+
+## Qué aprendí
+
+**Que un evento en `document` sirve para toda la página.** Con `event.target` sé qué elemento ha recibido el click, y con `tagName` decido qué hacer con él.
+
+**A guardar el estado antes de cambiarlo.** Si no guardo el `src` o el color original en el `dataset`, al quitar el ratón no tengo forma de volver atrás.
+
+**A escribir una función pequeña y reutilizarla.** `getRandom` funciona igual con el array de colores que con el de gifs.
+
+## Enunciado original
+
 ![logotipo de The Bridge](https://user-images.githubusercontent.com/27650532/77754601-e8365180-702b-11ea-8bed-5bc14a43f869.png "logotipo de The Bridge")
 
 # :crossed_swords: Varita mágica #
